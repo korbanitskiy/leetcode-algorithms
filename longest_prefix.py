@@ -17,7 +17,7 @@ Explanation: There is no common prefix among the input strings.
 def longest_prefix(arr):
     prefix = ""
     for letters in zip(*arr):
-        if all(letters[0] == l for l in letters[1:]):
+        if all(letters[0] == l for l in letters):
             prefix += letters[0]
         else:
             break
